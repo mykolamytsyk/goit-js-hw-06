@@ -7,10 +7,13 @@ function onBlurBorderColor(event) {
   const inputValueLength = Number(inputRef.value.trim().length);
 
   if (inputValueLength === inputDataLength) {
-    inputRef.classList.add("valid");
-    inputRef.classList.remove("invalid");
+    updateClassE1("valid", "invalid");
   } else {
-    inputRef.classList.remove("valid");
-    inputRef.classList.add("invalid");
+    updateClassE1("invalid", "valid");
   }
+}
+
+function updateClassE1(a, b) {
+  inputRef.classList.add(a);
+  inputRef.classList.remove(b);
 }
