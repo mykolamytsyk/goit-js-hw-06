@@ -4,7 +4,7 @@ inputRef.addEventListener("blur", onBlurBorderColor);
 
 function onBlurBorderColor(event) {
   const inputDataLength = Number(inputRef.dataset.length);
-  const inputValueLength = Number(inputRef.value.trim().length);
+  const inputValueLength = inputRef.value.trim().length;
 
   if (inputValueLength === inputDataLength) {
     updateClassE1("valid", "invalid");
